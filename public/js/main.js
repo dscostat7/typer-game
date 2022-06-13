@@ -1,0 +1,1 @@
+alert('jquery is on');
