@@ -1,4 +1,5 @@
 var words = $('.words').text();
 var lenght = words.split(' ').length;
+var number = $("#number");
 
-alert(lenght);
+number.text(lenght);
