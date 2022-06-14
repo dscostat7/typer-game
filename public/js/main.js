@@ -14,3 +14,17 @@ camp.on('input', function () {
     $('#counter-words').text(countWords);
     $('#counter-caracter').text(countCaracters);
 });
+
+var timer = $('#timer').text();
+
+camp.one('focus', function () {
+    var interval = setInterval(function () {
+        timer--;
+        $('#timer').text(timer);
+        
+        if (timer <= 0) {
+            camp.attr('disabled', true);
+            clearInterval(interval);
+        }
+    }, 1000);
+});
