@@ -6,8 +6,11 @@ number.text(lenght);
 
 var camp = $('#box-writer');
 
-camp.change(function () {
+camp.on('input', function () {
     var content = camp.val();
-    var countWords = content.split(' ').length;
+    var countWords = content.split(/\S+/).length -1;
+    var countCaracters = content.length;
+
     $('#counter-words').text(countWords);
+    $('#counter-caracter').text(countCaracters);
 });
