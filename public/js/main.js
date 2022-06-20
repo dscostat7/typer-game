@@ -1,7 +1,12 @@
+var timerInitial = $('#timer').text();
+var camp = $('#box-writer');
+var reset = $("#reset_game");
+
 $(document).ready(function () {
     atualizaFrase();
     inicializaContadores();
     initialTimer();
+    reset.on('click', reiniciaJogo);
 });
 
 function atualizaFrase() {
@@ -10,9 +15,6 @@ function atualizaFrase() {
     var number = $("#number");
     number.text(lenght);
 }
-
-var timerInitial = $('#timer').text();
-var camp = $('#box-writer');
 
 function inicializaContadores() {
     camp.on('input', function () {
@@ -40,10 +42,6 @@ function initialTimer() {
         }, 1000);
     });
 }
-
-var reset = $("#reset_game");
-
-reset.on('click', reiniciaJogo);
 
 function reiniciaJogo() {
     camp.attr('disabled', false);
