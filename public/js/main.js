@@ -1,14 +1,17 @@
-
+$(document).ready(function () {
+    atualizaFrase();
+    inicializaContadores();
+    initialTimer();
+});
 
 function atualizaFrase() {
     var words = $('.words').text();
     var lenght = words.split(' ').length;
     var number = $("#number");
-    var timerInitial = $('#timer').text();
     number.text(lenght);
 }
 
-
+var timerInitial = $('#timer').text();
 var camp = $('#box-writer');
 
 function inicializaContadores() {
@@ -40,11 +43,13 @@ function initialTimer() {
 
 var reset = $("#reset_game");
 
-reset.on('click', function () {
+reset.on('click', reiniciaJogo);
+
+function reiniciaJogo() {
     camp.attr('disabled', false);
     camp.val('');
     $('#counter-words').text('0');
     $('#counter-caracter').text('0');
     $('#timer').text(timerInitial);
     initialTimer();
-});
+}
