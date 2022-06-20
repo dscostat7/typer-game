@@ -1,22 +1,26 @@
+
+
 function atualizaFrase() {
     var words = $('.words').text();
     var lenght = words.split(' ').length;
     var number = $("#number");
     var timerInitial = $('#timer').text();
+    number.text(lenght);
 }
 
-number.text(lenght);
 
 var camp = $('#box-writer');
 
-camp.on('input', function () {
-    var content = camp.val();
-    var countWords = content.split(/\S+/).length - 1;
-    var countCaracters = content.length;
+function inicializaContadores() {
+    camp.on('input', function () {
+        var content = camp.val();
+        var countWords = content.split(/\S+/).length - 1;
+        var countCaracters = content.length;
 
-    $('#counter-words').text(countWords);
-    $('#counter-caracter').text(countCaracters);
-});
+        $('#counter-words').text(countWords);
+        $('#counter-caracter').text(countCaracters);
+    });
+}
 
 function initialTimer() {
     var timer = $('#timer').text();
