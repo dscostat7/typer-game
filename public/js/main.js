@@ -1,7 +1,9 @@
-var words = $('.words').text();
-var lenght = words.split(' ').length;
-var number = $("#number");
-var timerInitial = $('#timer').text();
+function atualizaFrase() {
+    var words = $('.words').text();
+    var lenght = words.split(' ').length;
+    var number = $("#number");
+    var timerInitial = $('#timer').text();
+}
 
 number.text(lenght);
 
