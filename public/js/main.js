@@ -2,7 +2,7 @@ var timerInitial = $('#timer').text();
 var camp = $('#box-writer');
 var reset = $("#reset_game");
 
-$(document).ready(function () {
+$(function () {
     atualizaFrase();
     inicializaContadores();
     initialTimer();
