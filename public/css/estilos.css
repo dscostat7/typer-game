@@ -1,5 +1,6 @@
 .words {
     font-size: 20px;
+    text-align: left;
 }
 
 #box-writer {
@@ -16,5 +17,13 @@
 }
 
 .botoes {
-    
+
+}
+
+.campo_certo {
+    border: 3px solid green;
+}
+
+.campo_errado {
+    border: 3px solid red;
 }

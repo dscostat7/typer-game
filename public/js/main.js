@@ -1,16 +1,17 @@
 var timerInitial = $('#timer').text();
 var camp = $('#box-writer');
 var reset = $("#reset_game");
+var words = $('.words').text();
 
 $(function () {
     atualizaFrase();
     inicializaContadores();
     initialTimer();
+    verification();
     reset.on('click', reiniciaJogo);
 });
 
 function atualizaFrase() {
-    var words = $('.words').text();
     var lenght = words.split(' ').length;
     var number = $("#number");
     number.text(lenght);
@@ -52,4 +53,23 @@ function reiniciaJogo() {
     $('#timer').text(timerInitial);
     initialTimer();
     camp.toggleClass('disabled_camp');
+    camp.removeClass('campo_certo');
+    camp.removeClass('campo_errado');
+}
+
+function verification() {
+    camp.on("input", function () {
+        var digitado = camp.val();
+        var comparation = words.substr(0, digitado.length);
+
+        if (digitado == comparation) {
+            camp.addClass("campo_certo");
+            camp.removeClass("campo_errado");
+            console.log("esta certinho");
+        } else {
+            camp.addClass("campo_errado");
+            camp.removeClass("campo_certo");
+            console.log("errado");
+        }
+    });
 }
