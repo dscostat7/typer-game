@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Typer Game</title>
     <link rel="stylesheet" href="css/libs/materialize.min.css">
+    <link rel="stylesheet" href="css/libs/google-fonts.css">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 
@@ -16,12 +17,23 @@
             nesciunt omnis officia eum atque harum dolores quasi deleniti maiores error rerum hic explicabo?</p>
         
         <ul class="list center">
-            <li><span id="number">5</span> words</li>
-            <li><span id="timer">10</span> seconds</li>
+            <li>
+                <i class="small material-icons icones">description</i>
+                <span id="number">5</span> words
+            </li>
+            <li>
+                <i class="small material-icons icones">query_builder</i>
+                <span id="timer">10</span> seconds
+            </li>
         </ul>
         
         <textarea id="box-writer" cols="40" rows="8"></textarea>
-        <button id="reset_game">Reiniciar</button>
+
+        <div class="botoes">
+            <a class="btn-floating btn-large waves-effect waves-light red" id="reset_game">
+                <i class="material-icons">restore</i>
+            </a>
+        </div>
         
         <ul class="center">
             <li><span id="counter-caracter">0</span> Caracteres</li>
