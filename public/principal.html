@@ -5,25 +5,29 @@
     <meta charset="UTF-8">
     <title>Typer Game</title>
     <link rel="stylesheet" href="css/libs/materialize.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
-    <h1>Typer Game</h1>
-    <p class="words">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate dicta veritatis quo enim doloribus id fuga,
-        nesciunt omnis officia eum atque harum dolores quasi deleniti maiores error rerum hic explicabo?</p>
-
-    <ul class="list">
-        <li><span id="number">5</span> words</li>
-        <li><span id="timer">10</span> seconds</li>
-    </ul>
-
-    <textarea id="box-writer" cols="40" rows="8"></textarea>
-    <button id="reset_game">Reiniciar</button>
-
-    <ul>
-        <li><span id="counter-caracter">0</span> Caracteres</li>
-        <li><span id="counter-words">0</span> Palavras</li>
-    </ul>
+    <div class="container">
+        <h1 class="center">Typer Game</h1>
+        <p class="words center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate dicta veritatis quo enim doloribus
+            id fuga,
+            nesciunt omnis officia eum atque harum dolores quasi deleniti maiores error rerum hic explicabo?</p>
+        
+        <ul class="list center">
+            <li><span id="number">5</span> words</li>
+            <li><span id="timer">10</span> seconds</li>
+        </ul>
+        
+        <textarea id="box-writer" cols="40" rows="8"></textarea>
+        <button id="reset_game">Reiniciar</button>
+        
+        <ul class="center">
+            <li><span id="counter-caracter">0</span> Caracteres</li>
+            <li><span id="counter-words">0</span> Palavras</li>
+        </ul>
+    </div>
 </body>
 
 <script src="js/jquery.js"></script>

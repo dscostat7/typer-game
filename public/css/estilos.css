@@ -1,0 +1,12 @@
+.words {
+    font-size: 20px;
+}
+
+#box-writer {
+    font-size: 20px;
+    height: 150px;
+}
+
+.disabled_camp {
+    background-color: lightgray;
+}

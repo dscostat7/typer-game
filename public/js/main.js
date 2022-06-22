@@ -38,6 +38,7 @@ function initialTimer() {
             if (timer <= 0) {
                 camp.attr('disabled', true);
                 clearInterval(interval);
+                camp.addClass('disabled_camp');
             }
         }, 1000);
     });
@@ -50,4 +51,5 @@ function reiniciaJogo() {
     $('#counter-caracter').text('0');
     $('#timer').text(timerInitial);
     initialTimer();
+    camp.removeClass('disabled_camp');
 }
