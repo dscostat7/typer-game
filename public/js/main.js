@@ -83,7 +83,14 @@ function inserePlacar() {
     var corpoTable = $(".placar").find("tbody");
     var numPalavras = $("#counter-words").text();
     var usuario = prompt('Informe seu nome:');
+    var remove = "<a href='#' class='botaoRemover'><i class='small material-icons'>delete</i></a>";
 
-    var linha = "<tr>"+"<td>"+usuario+"</td>"+"<td>"+numPalavras+"</td>"+"</tr>";
+    var linha = "<tr>"+"<td>"+usuario+"</td>"+"<td>"+numPalavras+"</td>"+"<td>"+remove+"</td>"+"</tr>";
+
     corpoTable.prepend(linha);
 }
+
+$(".botaoRemover").click(function(event){
+    event.preventDefault();
+    $(this).parent().parent().remove();
+});
