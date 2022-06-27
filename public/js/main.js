@@ -86,5 +86,5 @@ function inserePlacar() {
 
     var linha = "<tr>"+"<td>"+usuario+"</td>"+"<td>"+numPalavras+"</td>"+"</tr>";
 
-    corpoTable.append(linha);
+    corpoTable.prepend(linha);
 }
