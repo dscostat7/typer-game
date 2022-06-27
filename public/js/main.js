@@ -37,12 +37,17 @@ function initialTimer() {
             $('#timer').text(timer);
 
             if (timer <= 0) {
-                camp.attr('disabled', true);
                 clearInterval(interval);
-                camp.toggleClass('disabled_camp');
+                finalizaGame();
             }
         }, 1000);
     });
+}
+
+function finalizaGame() {
+    camp.attr('disabled', true);
+    camp.toggleClass('disabled_camp');
+    inserePlacar();
 }
 
 function reiniciaJogo() {
@@ -72,4 +77,14 @@ function verification() {
             console.log("errado");
         }
     });
+}
+
+function inserePlacar() {
+    var corpoTable = $(".placar").find("tbody");
+    var numPalavras = $("#counter-words").text();
+    var usuario = prompt('Informe seu nome:');
+
+    var linha = "<tr>"+"<td>"+usuario+"</td>"+"<td>"+numPalavras+"</td>"+"</tr>";
+
+    corpoTable.append(linha);
 }
