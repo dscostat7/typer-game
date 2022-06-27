@@ -85,6 +85,5 @@ function inserePlacar() {
     var usuario = prompt('Informe seu nome:');
 
     var linha = "<tr>"+"<td>"+usuario+"</td>"+"<td>"+numPalavras+"</td>"+"</tr>";
-
     corpoTable.prepend(linha);
 }
